@@ -54,6 +54,7 @@ reviewRouter.post("/", async (req, res, next) => {
     const extra_medias = {
       ...req.body,
       id: uniqid(),
+      createdAt: new Date(),
     };
     medias.push(extra_medias);
     console.log(extra_medias);
