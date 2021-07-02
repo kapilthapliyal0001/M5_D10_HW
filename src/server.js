@@ -5,6 +5,7 @@ import cors from "cors";
 
 //importing the routers
 import mediaRouter from "./mediaRouter/mediaRouter.js";
+import reviewRouter from "./reviewRouter/reviewRouter.js";
 
 //initialiazing
 const server = express();
@@ -30,6 +31,7 @@ console.log("I am here");
 
 //server Routes
 server.use("/medias", mediaRouter);
+server.use("/review", reviewRouter);
 
 // Listening the port at 3001;
 console.table(listEndpoints(server));
